@@ -1,0 +1,101 @@
+body {
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.birthday-heading {
+    color: #e91e63;
+    font-size: 1.5em;
+    text-shadow: 0 0 5px #fff, 0 0 10px #e91e63, 0 0 15px #e91e63, 0 0 20px #e91e63, 0 0 25px #e91e63;
+}
+
+.photo-container {
+    position: relative;
+    width: 100%;
+    margin: 10px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    height: auto;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+p {
+    font-size: 1em;
+    color: #333;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    background-color: #e91e63;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    font-size: 0.8em;
+    transition: transform 0.2s, background-color 0.3s;
+}
+
+button:hover {
+    background-color: #d81b60;
+    transform: scale(1.05);
+}
+
+button:active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease;
+}
+
+button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+@media (max-width: 600px) {
+    p {
+        font-size: 1em;
+    }
+
+    button {
+        padding: 8px 12px;
+    }
+}
